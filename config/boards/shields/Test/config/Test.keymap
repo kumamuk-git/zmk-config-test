@@ -7,7 +7,7 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &mkp MB1   &kp B
+                &mmv MOVE_UP  &kp B
             >;
         };
     };
