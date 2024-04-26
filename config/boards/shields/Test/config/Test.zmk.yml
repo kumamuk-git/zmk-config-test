@@ -1,0 +1,8 @@
+file_format: "1"
+id: test
+name: Test
+type: shield
+url: https://github.com/masaki-krrn/zmk-config-test
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
