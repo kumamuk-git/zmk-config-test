@@ -9,10 +9,10 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &bt BT_SEL 0    &bt BT_SEL 1    &kp C    &kp D   &kp E
-                &bt BT_CLR      &kp G           &kp H    &kp I   &kp J
-                &kp K           &kp L           &kp N    &kp M   &kp O
-                &kp P           &kp Q                            &kp R
+                &bt BT_SEL 0    &bt B    &kp C    &kp D   &kp E
+                &bt F           &kp G    &kp H    &kp I   &kp J
+                &kp K           &kp L    &kp N    &kp M   &kp O
+                &kp P           &kp Q                     &kp R
             >;
         };
     };
