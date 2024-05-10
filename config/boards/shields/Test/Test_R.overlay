@@ -58,11 +58,11 @@
             ;
     };
 
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
+    // trackball_listener {
+    //     compatible = "zmk,input-listener";
+    //     device = <&trackball>;
 
-    };
+    // };
 
 	pd1: virtual_input {
 		compatible = "zmk,virtual-input";
@@ -75,7 +75,7 @@
 		/* peripheral side input device, used to... */
 		/*  - be intecepted on peripheral; */
 		/*  - and then, be resurrected as `zmk,virtual-device` on central; */
-		device = <&pd0>;
+		device = <&trackball>;
 		
 		/* channel id, used to be be transfered along with all input events. */
 		/* NOTE 1: pick any 8bit integer. (1 - 255) */
