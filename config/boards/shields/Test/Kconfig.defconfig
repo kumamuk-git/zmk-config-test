@@ -1,6 +1,23 @@
 if SHIELD_TEST
 
 config ZMK_KEYBOARD_NAME
-    default "Test"
+    default "Test_dongle"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 endif
+
+if SHIELD_TEST_R
+
+config ZMK_KEYBOARD_NAME
+    default "Test"
+
+config ZMK_SPLIT
+    default y
+
+endif
+

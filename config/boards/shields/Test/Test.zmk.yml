@@ -6,3 +6,6 @@ url: https://github.com/masaki-krrn/zmk-config-test
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+siblings:
+  - Test
+  - Test_right
