@@ -1,5 +1,10 @@
 #include "Test.dtsi"
 
+&pd0 {
+	status = "okay";
+	/* the rest of sensor config should be config here, e.g. gpios */
+};
+
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
