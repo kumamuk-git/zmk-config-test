@@ -17,14 +17,25 @@
         };
     };
 
-    trackball_central_listener {
-        compatible = "zmk,input-listener";
-        device = <&pd0>;
-	};
-
-    trackball_peripheral_listener {
-        compatible = "zmk,input-listener";
+    trackball_mmv_ibl {
+        compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
-	};
+        layers = <0>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        // bindings = <&ib_tog_layer MSK>;
+        // bindings = <&ib_fwd_to_hid_io>;
+    };
+    trackball_msl_ibl {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackball>;
+        layers = <1>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        y-invert;
+        bindings = <&ib_wheel_scaler 1 25>;
+    };
 
 };
