@@ -17,7 +17,7 @@
     };
 	/* define virtual input, will be resurrected for emitting input event */
 	/* NOTE: set `device = <&pd1>` in `zmk,input-listener` */
-	trackball: virtual_input {
+	trackball_v: virtual_input {
 		compatible = "zmk,virtual-input";
 	};
 
