@@ -1,19 +1,11 @@
 #include "Test.dtsi"
 
 / {
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        diode-direction = "col2row";
-    col-gpios
-        = <&xiao_d 6 GPIO_ACTIVE_HIGH>
-        ;
-    row-gpios
-    = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    ;
+    mock_kscan: kscan {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
     };
 	/* define virtual input, will be resurrected for emitting input event */
 	/* NOTE: set `device = <&pd1>` in `zmk,input-listener` */
@@ -30,6 +22,6 @@
 		relay-channel = <102>;
 
 		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&trackball>;
+		device = <&trackball_v>;
 	};
 };
