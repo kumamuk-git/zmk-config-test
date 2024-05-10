@@ -6,9 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
     default y
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
 endif
 
 if SHIELD_TEST_R
@@ -17,6 +14,9 @@ config ZMK_KEYBOARD_NAME
     default "Test_R"
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
