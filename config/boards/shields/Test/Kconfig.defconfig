@@ -1,7 +1,7 @@
 if SHIELD_TEST_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Test"
+    default "Test_Dongle"
 
 config ZMK_SPLIT
     default y
