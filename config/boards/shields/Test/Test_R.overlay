@@ -21,10 +21,6 @@
             ;
     };
 
-	trackball:virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-
 	/* for peripheral side, define (input-device)-to-(relay-channel) mapping */
 	input_relay_config_102 {
 		compatible = "zmk,split-peripheral-input-relay";
