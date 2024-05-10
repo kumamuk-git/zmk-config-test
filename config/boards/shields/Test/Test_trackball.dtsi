@@ -17,6 +17,10 @@
     };
 };
 
+&uart0 {
+	status = "disabled";
+};
+
 &spi0 {
     status = "disabled";
     compatible = "nordic,nrf-spim";

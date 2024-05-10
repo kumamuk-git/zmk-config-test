@@ -18,4 +18,4 @@
 #
 ---
 board: ["seeeduino_xiao_ble"]
-shield: ["Test", "Test_R","settings_reset"]
+shield: ["Test_Dongle", "Test_R","Test_L","settings_reset"]
