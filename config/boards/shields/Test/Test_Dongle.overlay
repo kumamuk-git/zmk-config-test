@@ -53,12 +53,12 @@
 	};
 };
 
-/{
-  trackball_listener { 
-    compatible = "zmk,input-listener";
-    device = <&trackball_v>;
-  };
-};
+// /{
+//   trackball_listener { 
+//     compatible = "zmk,input-listener";
+//     device = <&trackball_v>;
+//   };
+// };
 
 /{
   /* auto toggle mouse key layer */
