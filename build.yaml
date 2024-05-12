@@ -19,4 +19,4 @@
 ---
 include:
   - board: ["seeeduino_xiao_ble"]
-    shield: ["Test","setting_reset"]
+    shield: ["Test","settings_reset"]
