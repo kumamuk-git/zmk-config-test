@@ -18,5 +18,5 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: Test
+  - board: ["seeeduino_xiao_ble"]
+    shield: ["Test","setting_reset"]
