@@ -10,7 +10,7 @@
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                      &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F                      &kp G        &none                 &none              &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V                      &kp B        &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp Z      &kp X         &kp C         &kp V                      &kp B        &kp RIGHT_BRACKET      &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_HENKAN  &lt 1 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE      &lt 2 ENTER                             &kp DEL
             >;
 
@@ -19,7 +19,7 @@
 
         layer_1 {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(N2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp RS(NUMBER_0)
+&kp LS(NUMBER_1)  &kp LBKT  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp RS(EQUAL)  &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)
 &trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans            &trans            &trans            &trans            &trans
 &trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans            &trans            &trans            &trans            &trans
 &trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans                                                                  &trans
