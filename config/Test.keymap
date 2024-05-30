@@ -8,21 +8,21 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                      &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                      &kp G        &none                 &none              &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V                      &kp B        &kp RIGHT_BRACKET      &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_HENKAN  &lt 1 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE      &lt 2 ENTER                             &kp DEL
+&kp Q          &kp W         &kp E         &kp R                      &kp T                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A          &kp S         &kp D         &kp F                      &kp G        &none                 &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&lt 1 Z        &kp X         &kp C         &kp V                      &kp B        &kp RIGHT_BRACKET     &kp BSLH       &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&mt LCTRL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_HENKAN  &lt 6 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_1 {
             bindings = <
 &kp LS(NUMBER_1)  &kp LBKT  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp RS(EQUAL)  &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)
-&trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans            &trans            &trans            &trans            &trans
-&trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans            &trans            &trans            &trans            &trans
-&trans            &trans      &trans            &trans            &trans            &trans    &trans  &trans                                                                  &trans
+&trans            &trans    &trans            &trans            &trans            &trans    &trans  &trans         &trans            &trans            &trans            &trans
+&trans            &trans    &trans            &trans            &trans            &trans    &trans  &trans         &trans            &trans            &trans            &trans
+&trans            &trans    &trans            &trans            &trans            &trans    &trans  &trans                                                               &trans
             >;
         };
 
@@ -37,14 +37,14 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans                  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                                     &trans  &trans  &trans  &trans  &trans
+&kp HOME                &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(LS(LEFT_ARROW))  &trans           &trans          &trans           &kp LG(LS(RIGHT_ARROW))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans                  &trans           &trans          &trans           &trans                   &trans    &trans  &trans                          &trans
             >;
         };
 
-        layer_4 {
+        MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
@@ -53,7 +53,7 @@
             >;
         };
 
-        layer_5 {
+        SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -61,6 +61,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
+
+        layer_6 {
+            bindings = <
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
     };
 };
-
