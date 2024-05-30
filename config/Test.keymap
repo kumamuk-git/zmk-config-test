@@ -14,6 +14,11 @@
             bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
+
+        shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
@@ -50,10 +55,10 @@
 
         layer_3 {
             bindings = <
-&trans                  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                                     &trans  &trans  &trans  &trans  &trans
-&kp HOME                &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(LS(LEFT_ARROW))  &trans           &trans          &trans           &kp LG(LS(RIGHT_ARROW))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                  &trans           &trans          &trans           &trans                   &trans    &trans  &trans                          &trans
+&kp ESCAPE  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
+&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                          &trans
             >;
         };
 
