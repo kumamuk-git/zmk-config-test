@@ -19,6 +19,11 @@
             bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
         };
+
+        muhennkann {
+            bindings = <&kp INT_MUHENKAN>;
+            key-positions = <11 10>;
+        };
     };
 
     keymap {
