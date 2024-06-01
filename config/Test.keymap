@@ -37,7 +37,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 6 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE      &lt 2 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp A B>;
         };
 
         layer_1 {
@@ -95,4 +95,3 @@
         };
     };
 };
-
