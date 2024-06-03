@@ -6,9 +6,9 @@
 #define SCROLL 5
 #define NUM 6
 
-&mt { tapping-term-ms = <100>; };
+&mt { tapping-term-ms = <400>; };
 
-&lt { tapping-term-ms = <100>; };
+&lt { tapping-term-ms = <400>; };
 
 / {
     combos {
@@ -56,7 +56,7 @@
         layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp TILDE2   &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                          &trans
             >;
