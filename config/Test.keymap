@@ -6,95 +6,92 @@
 #define SCROLL 5
 #define NUM 6
 
-
 / {
+    combos {
+        compatible = "zmk,combos";
 
-combos {
-    compatible = "zmk,combos";
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+        };
 
-    tab {
-        bindings = <&kp TAB>;
-        key-positions = <11 12>;
+        shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
+
+        muhennkann {
+            bindings = <&kp INT_MUHENKAN>;
+            key-positions = <11 10>;
+        };
     };
 
-    shift_tab {
-        bindings = <&kp LS(TAB)>;
-        key-positions = <12 13>;
-    };
+    keymap {
+        compatible = "zmk,keymap";
 
-    muhennkann {
-        bindings = <&kp INT_MUHENKAN>;
-        key-positions = <11 10>;
-    };
-};
-
-keymap {
-    compatible = "zmk,keymap";
-
-    default_layer {
-        bindings = <
+        default_layer {
+            bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F             &kp G        &none                 &kp MINUS          &kp H        &kp J  &kp K      &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 6 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE      &lt 2 ENTER                             &kp DEL
-        >;
+            >;
 
-        sensor-bindings = <&inc_dec_kp A B>;
-    };
+            sensor-bindings = <&inc_dec_kp A B>;
+        };
 
-    layer_1 {
-        bindings = <
+        layer_1 {
+            bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
-        >;
-    };
+            >;
+        };
 
-    layer_2 {
-        bindings = <
+        layer_2 {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp TILDE    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                          &trans
-        >;
-    };
+            >;
+        };
 
-    layer_3 {
-        bindings = <
+        layer_3 {
+            bindings = <
 &kp ESCAPE  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
 &kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                          &trans
-        >;
-    };
+            >;
+        };
 
-    MOUSE {
-        bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
-        >;
-    };
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+            >;
+        };
 
-    SCROLL {
-        bindings = <
+        SCROLL {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-        >;
-    };
+            >;
+        };
 
-    NUM {
-        bindings = <
+        NUM {
+            bindings = <
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                    &trans  &trans  &trans     &trans         &kp EQUAL
 &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans    &trans  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp PLUS
 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans    &trans  &trans  &trans  &trans     &none          &kp BACKSLASH
 &trans           &trans           &trans           &trans           &trans  &trans    &trans  &trans                                    &trans
-        >;
+            >;
+        };
     };
-};
-
 };
