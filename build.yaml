@@ -17,5 +17,11 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-board: ["seeeduino_xiao_ble"]
-shield: ["Test_R","Test_L","settings_reset"]
+include:
+  - board: seeeduino_xiao_ble
+    shield: Test_R
+    snippet: zmk-usb-logging
+  - board: seeeduino_xiao_ble
+    shield: Test_L
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
