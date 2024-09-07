@@ -69,12 +69,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-    };
-
-    pmw3610: behavior_pmw3610 {
-        compatible = "zmk,behavior-pmw3610";
-        #binding-cells = <0>;
-        pixart_dev = <&trackball>;
+        
+        cpi_i200: cpi_i200 {
+            compatible = "zmk,behavior-pmw3610";
+            #binding-cells = <0>;
+            pixart_dev = <&trackball>;
+            increase_cpi;
+        };
+        cpi_d200: cpi_d200 {
+            compatible = "zmk,behavior-pmw3610";
+            #binding-cells = <0>;
+            pixart_dev = <&trackball>;
+            decrease_cpi;
+        };
     };
 
     keymap {
