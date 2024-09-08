@@ -15,4 +15,7 @@
     status = "okay";
 };
 
-/delete-node/ &trackball;
+trackball: dummy_trackball@0 {
+    compatible = "dummy,device";
+    status = "disabled";
+};
