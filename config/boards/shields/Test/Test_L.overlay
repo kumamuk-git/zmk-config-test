@@ -19,5 +19,6 @@
         trackball: dummy_trackball@0 {
             compatible = "zmk,virtual-input";
             status = "disabled";
+            reg = <0>;
         };
 };
