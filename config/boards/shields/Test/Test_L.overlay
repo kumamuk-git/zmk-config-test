@@ -16,9 +16,7 @@
 };
 
 / {
-        trackball: dummy_trackball@0 {
+        trackball: dummy_trackball {
             compatible = "zmk,virtual-input";
-            status = "disabled";
-            reg = <0>;
         };
 };
