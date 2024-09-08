@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
