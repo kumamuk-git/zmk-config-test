@@ -40,6 +40,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        large_Z {
+            bindings = <&kp LS(Z)>;
+            key-positions = <23 22>;
+        };
     };
 
     macros {
