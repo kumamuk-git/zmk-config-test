@@ -63,23 +63,24 @@
 };
 
 /{
+  /*オートマウスレイヤ*/
   /* auto toggle mouse key layer */
   trackball_peripheral_auto_mouse_listener {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball_v>;
-    layers = <0 1 2 3 4>;
+    layers = <0 1 2 3 6>;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
 		scale-multiplier = <1>;
 		scale-divisor = <1>;
-    bindings = <&ib_tog_layer 5>;
+    bindings = <&ib_tog_layer 4>;
    };
 
    /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
    ib_tog_layer: ib_tog_layer {
         compatible = "zmk,input-behavior-tog-layer";
         #binding-cells = <1>;
-        time-to-live-ms = <2000>;
+        time-to-live-ms = <800>;//マウスレイヤの有効時間
     };
 };
