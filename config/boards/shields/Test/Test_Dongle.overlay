@@ -75,4 +75,11 @@
 		scale-divisor = <1>;
     bindings = <&ib_tog_layer 5>;
    };
+
+   /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
+   ib_tog_layer: ib_tog_layer {
+        compatible = "zmk,input-behavior-tog-layer";
+        #binding-cells = <1>;
+        time-to-live-ms = <2000>;
+    };
 };
