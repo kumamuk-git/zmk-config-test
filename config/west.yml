@@ -28,7 +28,7 @@ manifest:
       revision: main
 
     - name: prospector-zmk-module                
-      remote: carrefinho                         
+      remote: kuma                         
       revision: main                            
       
   self:
