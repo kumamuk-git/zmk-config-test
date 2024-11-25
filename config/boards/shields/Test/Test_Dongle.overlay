@@ -31,6 +31,8 @@
     };
 };
 
+&xiao_serial { status = "disabled"; };
+
 / {
 	/* define virtual input, will be resurrected for emitting input event */
 	/* NOTE: set `device = <&pd1>` in `zmk,input-listener` */
