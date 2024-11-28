@@ -14,18 +14,10 @@ manifest:
       remote: badjeff
       revision: main
 
-    - name: zmk-split-peripheral-input-relay
-      remote: badjeff
-      revision: main
-
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-with-input-processors
       import: app/west.yml
-
-    - name: zmk-input-behavior-listener
-      remote: badjeff
-      revision: main
 
     - name: prospector-zmk-module                
       remote: carrefinho                         

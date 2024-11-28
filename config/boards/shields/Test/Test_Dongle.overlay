@@ -1,19 +1,6 @@
 #include "Test.dtsi"
 #include "Test_trackball.dtsi"
 
-#define INPUT_EV_KEY 0x01               /**< Key event */
-#define INPUT_EV_REL 0x02               /**< Relative coordinate event */
-#define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
-#define INPUT_EV_MSC 0x04               /**< Miscellaneous event */
-#define INPUT_EV_VENDOR_START 0xf0      /**< Vendor specific event start */
-#define INPUT_EV_VENDOR_STOP 0xff       /**< Vendor specific event stop */
-
-#define INPUT_REL_X 0x00                /**< Relative X coordinate */
-#define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
-#define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
-#define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
-
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
@@ -33,54 +20,6 @@
 
 // &xiao_serial { status = "disabled"; };
 
-/ {
-	/* define virtual input, will be resurrected for emitting input event */
-	/* NOTE: set `device = <&pd1>` in `zmk,input-listener` */
-  trackball_v: virtual_input {
-    compatible = "zmk,virtual-input";
-  };
-};
-
-/ {
-	/* for central side, define (relay-channel)-to-(virtual-input) mapping */
-	input_relay_config_102 {
-		compatible = "zmk,split-peripheral-input-relay";
-		
-		/* channel id, used to filter incoming annotated input event from split peripheral */
-		/* NOTE: should matching relay-channel on peripheral overlay */
-		relay-channel = <102>;
-
-		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&trackball_v>;
-	};
-};
-
-/{
-  trackball_listener { 
-    compatible = "zmk,input-listener";
-    device = <&trackball_v>;
-  };
-};
-
-/{
-  /*オートマウスレイヤ*/
-  /* auto toggle mouse key layer */
-  trackball_peripheral_auto_mouse_listener {
-    compatible = "zmk,input-behavior-listener";
-    device = <&trackball_v>;
-    layers = <0 1 2 3 6>;
-		evt-type = <INPUT_EV_REL>;
-		x-input-code = <INPUT_REL_X>;
-		y-input-code = <INPUT_REL_Y>;
-		scale-multiplier = <1>;
-		scale-divisor = <1>;
-    bindings = <&ib_tog_layer 4>;
-   };
-
-   /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
-   ib_tog_layer: ib_tog_layer {
-        compatible = "zmk,input-behavior-tog-layer";
-        #binding-cells = <1>;
-        time-to-live-ms = <800>;//マウスレイヤの有効時間
-    };
+&trackball_listener {
+    status = "okay";
 };
