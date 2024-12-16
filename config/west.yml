@@ -19,9 +19,9 @@ manifest:
       revision: feat/pointers-with-input-processors
       import: app/west.yml
 
-    # - name: prospector-zmk-module                
-    #   remote: kuma                         
-    #   revision: main                            
+    - name: prospector-zmk-module                
+      remote: kuma                         
+      revision: main                            
       
   self:
     path: config
