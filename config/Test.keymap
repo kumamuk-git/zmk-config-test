@@ -2,22 +2,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <./boards/shields/Test/Test_R.overlay>
 
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
 
-&trackball{
-    arrows {
-        layers = <7>;
-        bindings = 
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
-            <&kp DOWN_ARROW>;
-    };
-};
 
 &mt {
     flavor = "balanced";
